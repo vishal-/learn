@@ -2,6 +2,7 @@ import express, { Application, Response } from "express";
 // import bodyParser from "body-parser";
 
 const SERVER_PORT = 3030;
+console.log(process.env.DB_HOST);
 
 // const cors = require("cors");
 
