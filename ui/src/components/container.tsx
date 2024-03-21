@@ -8,7 +8,7 @@ const Container = () => {
     <div className="container">
       <BrowserRouter>
         <Routes>
-          <Route path="/subject" element={<Subjects />} />
+          <Route path="/subjects" element={<Subjects />} />
           <Route path="/worksheet" element={<Worksheet />} />
         </Routes>
       </BrowserRouter>
