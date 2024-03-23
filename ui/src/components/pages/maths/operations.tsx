@@ -1,11 +1,13 @@
 import React from "react";
 import MathUtils from "../../utils/math.utils";
 import Equation from "../../atoms/equation";
+import { OperationTypes } from "./maths.constants";
 
 interface AdditionProps {
   count?: number;
   operandSize?: number;
   showResults: boolean;
+  operationType: OperationTypes;
 }
 
 interface Problem {
@@ -14,9 +16,10 @@ interface Problem {
   sum: number;
 }
 
-const Additions = ({
+const Operations = ({
   count = 1,
   operandSize = 5,
+  operationType,
   showResults
 }: AdditionProps) => {
   const problems: Problem[] = React.useMemo(
@@ -24,6 +27,7 @@ const Additions = ({
       Array.from({ length: count }, () => {
         const x = MathUtils.getRandomNumberBySize(operandSize);
         const y = MathUtils.getRandomNumberBySize(operandSize);
+
         return { x, y, sum: x + y };
       }),
     [count]
@@ -46,4 +50,4 @@ const Additions = ({
   );
 };
 
-export default Additions;
+export default Operations;
