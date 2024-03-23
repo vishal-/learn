@@ -4,3 +4,9 @@ export enum OperationTypes {
   MULTIPLICATION,
   DIVISION
 }
+
+export interface Problem {
+  x: number;
+  y: number;
+  result: number;
+}

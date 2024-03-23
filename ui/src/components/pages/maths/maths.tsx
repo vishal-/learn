@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Additions from "./addition";
+import Operations from "./operations";
+import { OperationTypes } from "../../static/maths.constants";
 
 const Maths = () => {
   const [showResults, setShowResults] = React.useState<boolean>(false);
@@ -9,7 +10,11 @@ const Maths = () => {
 
   return (
     <div>
-      <Additions count={7} showResults={showResults} />
+      <Operations
+        count={7}
+        showResults={showResults}
+        operationType={OperationTypes.ADDITION}
+      />
 
       {/* <Link to={"/maths/addition"}>Addition</Link> */}
 
