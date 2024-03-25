@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Subjects from "./pages/subjects";
 import Worksheet from "./pages/worksheet";
 import Header from "./molecules/header";
@@ -11,7 +11,7 @@ import { ROUTES } from "./static/routes";
 const Container = () => {
   return (
     <div className="container mx-auto">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
 
         <Routes>
@@ -19,7 +19,7 @@ const Container = () => {
             <Route key={path} path={path} Component={Component} />
           ))}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
