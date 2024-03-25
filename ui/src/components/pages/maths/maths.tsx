@@ -9,7 +9,7 @@ const Maths = () => {
   const onShowResults = () => setShowResults(true);
 
   return (
-    <div>
+    <div className="card">
       <Operations
         count={7}
         showResults={showResults}
@@ -19,7 +19,9 @@ const Maths = () => {
       {/* <Link to={"/maths/addition"}>Addition</Link> */}
 
       <div>
-        <button onClick={onShowResults}>Show Results</button>
+        <button onClick={onShowResults} className="btn btn-primary">
+          Show Results
+        </button>
       </div>
     </div>
   );

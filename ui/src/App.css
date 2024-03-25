@@ -5,8 +5,10 @@ section {
   flex-wrap: wrap;
 
   .equation {
-    min-width: 50%;
+    width: 50%;
+    /* min-width: 50%; */
     margin: 1rem 0;
+    font-size: 1.5rem;
 
     span {
       margin: 0 0.5rem;

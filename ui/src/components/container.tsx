@@ -5,6 +5,8 @@ import Worksheet from "./pages/worksheet";
 import Header from "./molecules/header";
 import Maths from "./pages/maths/maths";
 import "../App.css";
+import Home from "./pages/home";
+import { ROUTES } from "./static/routes";
 
 const Container = () => {
   return (
@@ -13,9 +15,9 @@ const Container = () => {
         <Header />
 
         <Routes>
-          <Route path="/maths" element={<Maths />} />
-          <Route path="/subjects" element={<Subjects />} />
-          <Route path="/worksheet" element={<Worksheet />} />
+          {ROUTES.map(({ path, Component }) => (
+            <Route key={path} path={path} Component={Component} />
+          ))}
         </Routes>
       </BrowserRouter>
     </div>
