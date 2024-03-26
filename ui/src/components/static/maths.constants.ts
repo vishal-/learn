@@ -1,8 +1,8 @@
 export enum OperationTypes {
-  ADDITION,
-  SUBSTRACTION,
-  MULTIPLICATION,
-  DIVISION
+  ADDITION = "Addition",
+  SUBTRACTION = "Subtraction",
+  MULTIPLICATION = "Multiplication",
+  DIVISION = "Division"
 }
 
 export interface Problem {
@@ -10,3 +10,5 @@ export interface Problem {
   y: number;
   result: number;
 }
+
+export const MathOperations = Object.assign({}, OperationTypes);

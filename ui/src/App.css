@@ -1,17 +1,14 @@
-section {
-  display: flex;
-  margin: 1rem;
-  /* border: 1px solid #eee; */
-  flex-wrap: wrap;
+.equation {
+  font-size: 1.5rem;
 
-  .equation {
-    width: 50%;
-    /* min-width: 50%; */
-    margin: 1rem 0;
-    font-size: 1.5rem;
+  span {
+    margin: 0 1rem;
+  }
 
-    span {
-      margin: 0 0.5rem;
-    }
+  input[type="text"] {
+    width: 6rem;
+    margin-left: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
   }
 }

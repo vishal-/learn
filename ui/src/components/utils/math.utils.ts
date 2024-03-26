@@ -21,8 +21,19 @@ const createEquationParams = (
 
   switch (operation) {
     case OperationTypes.ADDITION:
-    default:
       return { x: a, y: b, result: a + b };
+
+    case OperationTypes.DIVISION:
+      return { x: a, y: b, result: a / b };
+
+    case OperationTypes.MULTIPLICATION:
+      return { x: a, y: b, result: a * b };
+
+    case OperationTypes.SUBTRACTION:
+    default: {
+      const [y, x] = [a, b].sort();
+      return { x, y, result: x - y };
+    }
   }
 };
 

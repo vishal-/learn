@@ -12,7 +12,7 @@ interface AdditionProps {
 
 const Operations = ({
   count = 1,
-  operandSize = 5,
+  operandSize = 3,
   operationType,
   showResults
 }: AdditionProps) => {
@@ -25,19 +25,19 @@ const Operations = ({
   );
 
   return (
-    <section>
+    <>
       {problems.map(({ x, y, result }, index) => (
         <Equation
           key={`${x}_${y}_${result}`}
           index={index + 1}
           operandX={x}
           operandy={y}
-          operation="+"
+          operation={operationType}
           result={result}
           showResult={showResults}
         />
       ))}
-    </section>
+    </>
   );
 };
 
