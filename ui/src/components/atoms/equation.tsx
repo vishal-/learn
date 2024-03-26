@@ -39,7 +39,7 @@ const Equation = ({
   result,
   showResult
 }: EquationProps) => (
-  <div className="equation row my-3">
+  <div className="equation row">
     {/* {index && <span>{index})</span>} */}
     <div className="col">
       <span>{operandX}</span>

@@ -21,7 +21,7 @@ const Operations = ({
       Array.from({ length: count }, () => {
         return MathUtils.createEquationParams(operandSize, operationType);
       }),
-    [count]
+    [count, operandSize, operationType]
   );
 
   return (

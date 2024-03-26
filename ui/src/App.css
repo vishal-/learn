@@ -1,8 +1,13 @@
 .equation {
   font-size: 1.5rem;
+  border: 1px solid #eee;
+  margin: 1rem;
+  padding: 0.5rem 0;
 
   span {
     margin: 0 1rem;
+    min-width: 3rem;
+    display: inline-block;
   }
 
   input[type="text"] {
